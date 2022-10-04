@@ -13,4 +13,4 @@
 
 ## Author
 - Git Hud - [Leonardo Portilla](https://github.com/leooportilla)
-- Frontend Mentor - [@leooportilla](https://www.frontendmentor.io/profile/leooportilla)
+- Frontend Mentor - [@leooportilla](https://www.frontendmentor.io/profile/leooportilla) 
