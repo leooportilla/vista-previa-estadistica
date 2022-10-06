@@ -3,25 +3,42 @@
     --VeryDarkBlue: rgb(9, 11, 26);
     --DarkDesaturatedBlue: rgb(27, 25, 56);
     --SoftViolet: rgb(170, 92, 219);
+
     /*Secundary*/
     --StrongViolet: rgb(41, 21, 54);
     --White: rgb(255, 255, 255);
     --StrongTransparent: rgba(255, 255, 255, 0.75);
     --Softtransparent: rgba(255, 255, 255, 0.6);
     --Gris: rgb(163, 163, 163);
+
+    /* Font Size */
+    --Font: 15px;
+
+    /* Tipografia */
+    --TipografiaInter: 'Inter', sans-serif;
+    --TipogragiaLexend: 'Lexend Deca', sans-serif;
 }
 
+/* Normalizar Elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fondo de la tarjeta */
 body {
     background-color: var(--VeryDarkBlue);
-    font-size: 15px;
+    font-size: var(--Font);
+
+    /* Centrar tarjeta  */
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
 }
 
+/* Tarjeta */
 main {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -32,105 +49,124 @@ main {
     margin: auto;
     width: 90em;
     height: 33em;
-    margin-top: 20vh;
     background-color: var(--DarkDesaturatedBlue);
     color: var(--White);
     border-radius: 0.7em;
 }
 
-.Foto {
-    grid-area: Foto;
-}
+    /* Primera Seccion */
 
-.Texto {
-    grid-area: Texto;
-}
+    /* Contenedor de la Imagen */
+    .FotoContainer {
+        grid-area: Foto;
+    }
 
-.ContainerImage {
-    width: 100%;
-    height: 100%;
-    background-image: url(/Marketing/Image/Desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0 0.7em 0.7em 0;
-}
+        /* Imagen */
+        .ContainerImage {
+            width: 100%;
+            height: 100%;
+            background-image: url(/Marketing/Image/Desktop.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 0.7em 0.7em 0;
+        }
 
-.ImageBottom {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5em 0.5em 0 0;
-    background-color: var(--SoftViolet);
-    opacity: 0.6;
-    filter: brightness(0.6);
-    border-radius: 0 0.7em 0.7em 0;
-}
+        /* Fondo Rosado de la Imagen */
+        .ImageBottom {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5em 0.5em 0 0;
+            background-color: var(--SoftViolet);
+            opacity: 0.6;
+            filter: brightness(0.6);
+            border-radius: 0 0.7em 0.7em 0;
+        }
+    
 
-.Title {
-    font-family: 'Inter', sans-serif;
-    font-size: 3.2em;
-    text-align: left;
-    margin: 1.5em 1.5em 0.5em 1.5em;
+    /* Segunda Seccion */
 
-}
+    /* Todo contenido del texto */
+    .Texto {
+        grid-area: Texto;
+    }
 
-.Color {
-    color: var(--SoftViolet);
-}
+        /* Titulo */
+        .Title {
+            font-family: var(--TipografiaInter);
+            font-size: 3.2em;
+            text-align: left;
+            margin: 1.5em 1.5em 0.5em 1.5em;
+        }
 
-.Paragraph {
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 1.3em;
-    font-weight: 400;
-    color: var(--Gris);
-    line-height: 30px;
-    margin: 1em 7em 3em 3.5em;
-    text-align: left;
-}
+            /* Cambio de color en la palabra INSIGHTS */
+            .Color {
+                color: var(--SoftViolet);
+            }
 
-.Estadistica {
-    display: flex;
-    margin-top: 1em;
-    margin-left: 4.5em;
-}
+        .Paragraph {
+            font-family: var(--TipogragiaLexend);
+            font-size: 1.3em;
+            font-weight: 400;
+            color: var(--Gris);
+            line-height: 30px;
+            margin: 1em 7em 3em 3.5em;
+            text-align: left;
+        }
 
-.Secundary {
-    font-family: 'Inter', sans-serif;
-    color: var(--White);
-    font-size: 2em;
-    margin-right: 4em;
-    margin-bottom: 0.3em;
-}
+    /* Tercera Seccion */
 
-.SubTitle {
-    color: var(--Gris);
-    text-transform: uppercase;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-}
+    /* Contenedor de la Estadisticas */
+    .Estadistica {
+        display: flex;
+        margin-top: 1em;
+        margin-left: 4.5em;
+    }
 
+        /* Los titulos de las estadisticas */
+        .Secundary {
+            font-family: var(--TipografiaInter);
+            color: var(--White);
+            font-size: 2em;
+            margin-right: 4em;
+            margin-bottom: 0.3em;
+        }
+
+        /* Los Subtitulos de las estadisticas */
+        .SubTitle {
+            color: var(--Gris);
+            text-transform: uppercase;
+            font-family: var(--TipogragiaLexend);
+            font-size: 1em;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+        }
+
+/* Autores */
 .Atributos {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3em;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--TipografiaInter);
     color: var(--White);
 }
 
-.Reto {
-    font-size: 1em;
-    font-weight: 300;
-    color: var(--White);
-    font-family: 'Montserrat', sans-serif;
-}
+    .Nombre {
+        font-size: 1em;
+        font-weight: 300;
+        color: var(--White);
+        font-family: var(--TipografiaInter);
+    }
 
-.Atributos a {
-    margin-left: 0.4em;
-}
+    .Atributos a {
+        margin-left: 0.4em;
+        margin-right: 0.4em;
+    }
 
+/* Responsive */
 @media (max-width:375px) {
+
+    /* Posicionamiento */
     main {
         grid-template-rows: 30% 70%;
         grid-template-areas:
@@ -138,63 +174,74 @@ main {
             "Texto Texto";
         width: 22em;
         height: 50em;
-        margin-top: 5vh;
     }
 
-    .ContainerImage {
-        background-image: url(/Marketing/Image/Mobile.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0.7em 0.7em 0 0;
-    }
+        /* Primera Seccion */
 
-    .ImageBottom {
-        border-radius: 0.7em 0.7em 0 0;
-    }
+        /* Cambio de la imagen */
+        .ContainerImage {
+            background-image: url(/Marketing/Image/Mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0.7em 0.7em 0 0;
+        }
 
-    .Title {
-        font-size: 1.8em;
-        text-align: center;
-        margin: 1.5em 1em 0.5em 1em;
-
-    }
-
-    .Paragraph {
-        font-size: 1em;
-        line-height: 25px;
-        margin: 1em 2em 2em 2em;
-        text-align: center;
-    }
-
-    .Estadistica {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "Companies"
-            "Template"
-            "Queries";
-        justify-items: center;
-        margin: 0;
-    }
-
-    .Container {
-        display: contents;
-    }
-
-    .Secundary {
-        font-size: 1.5em;
-        margin-right: 0;
-        margin-bottom: 0.3em;
-    }
-
-    .SubTitle {
-        font-size: 0.8em;
-        margin-bottom: 2em;
-    }
+            /* Border redondiados */
+            .ImageBottom {
+                border-radius: 0.7em 0.7em 0 0;
+            }
 
 
-    .Reto {
+        /* Segunda Seccion */
+
+        /* Titulo */
+        .Title {
+            font-size: 1.8em;
+            text-align: center;
+            margin: 1.5em 1em 0.5em 1em;
+        }
+
+        /* Parrafo */
+        .Paragraph {
+            font-size: 1em;
+            line-height: 25px;
+            margin: 1em 2em 2em 2em;
+            text-align: center;
+        }
+
+
+        /* Tercera Seccion */
+
+        /* Posicionamiento */
+        .Estadistica {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "Companies"
+                "Template"
+                "Queries";
+            justify-items: center;
+            margin: 0;
+        }
+
+            .Container {
+                display: contents;
+            }
+
+            .Secundary {
+                font-size: 1.5em;
+                margin-right: 0;
+                margin-bottom: 0.3em;
+            }
+
+            .SubTitle {
+                font-size: 0.8em;
+                margin-bottom: 2em;
+            }
+
+    /* Autores */
+    .Nombre {
         font-size: 0.7em;
     }
 
